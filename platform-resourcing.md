@@ -4,6 +4,7 @@ Something like a google sheet doc might be easier for totaling columns. If one i
 - jupyter / jupyter-hub / elyra
 - object storage
 - postgresql or other SQL
+- sqlite / datasette / sqlalchemy
 - superset
 - spark
 - seldon
