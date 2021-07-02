@@ -35,10 +35,10 @@ spec:
             value: s3.odh.com
         repoRef:
           name: osc-manifests
-          path: odh-manifests/jupyterhub
+          path: manifests/odh-manifests/jupyterhub
   repos:
     - name: manifests
       uri: "https://github.com/opendatahub-io/odh-manifests/tarball/v1.1.0"
     - name: osc-manifests
-      uri: https://github.com/os-climatet/os_c_data_commons/tarball/master
+      uri: https://github.com/os-climate/os_c_data_commons/tarball/master
   version: v1.1.0
