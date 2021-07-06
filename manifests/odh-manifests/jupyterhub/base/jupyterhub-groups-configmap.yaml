@@ -7,3 +7,4 @@ metadata:
   name: jupyterhub-default-groups-config
 data:
   admin_groups: "odh-admin"
+  allowed_groups: "system:authenticated"
