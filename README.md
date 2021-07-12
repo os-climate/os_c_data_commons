@@ -5,3 +5,8 @@ OS-Climate Data Commons is a unified, open Multimodal Data Processing platform u
 - Data scientists in collaboratively solving data collection, cleaning and normalization issues, based on shared modeling standards, tooling and commnunity development following a data pipeline as code approach.
 - Decision makers such as investors, financial institutions, regulators in integrating new or existing scenario-based predictive analytics with an open repository of trustworthy climate data.
 
+## Architecture
+[Data Commons Architecture Blueprint](https://github.com/os-climate/os_c_data_commons/blob/main/os-c-data-commons-architecture-blueprint.md)
+
+
+
