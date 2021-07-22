@@ -4,7 +4,7 @@ metadata:
   annotations:
     kfctl.kubeflow.io/force-delete: "false"
   name: opendatahub
-  namespace: opf-trino
+  namespace: odh-trino
 spec:
   applications:
     - kustomizeConfig:
