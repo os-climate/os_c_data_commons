@@ -4,6 +4,8 @@ kind: Kustomization
 namespace: odh-trino
 resources:
   - kfdef.yaml
+generatorOptions:
+  disableNameSuffixHash: true
 secretGenerator:
   - name: odh-datacatalog-bucket
     literals:
