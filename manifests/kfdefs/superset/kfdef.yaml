@@ -1,0 +1,25 @@
+apiVersion: kfdef.apps.kubeflow.org/v1
+kind: KfDef
+metadata:
+  name: superset
+spec:
+  applications:
+    - kustomizeConfig:
+        repoRef:
+          name: manifests
+          path: odh-common
+      name: odh-common
+    - kustomizeConfig:
+        parameters:
+          - name: SUPERSET_ADMIN_PASSWORD
+            value: osclimate912
+          - name: SUPERSET_IMAGE
+            value: quay.io/opendatahub/superset:1.1.0
+        repoRef:
+          name: manifests
+          path: superset
+      name: superset
+  repos:
+    - name: manifests
+      uri: https://github.com/opendatahub-io/odh-manifests/tarball/v1.1.0
+  version: v1.1.0
