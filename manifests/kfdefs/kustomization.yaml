@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
   - jupyterhub
   - superset
+  - trino
