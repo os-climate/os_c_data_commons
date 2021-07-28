@@ -1,6 +1,7 @@
 # OS-C Data Commons Architecture Blueprint
 
 ## Guiding Principles
+
 These guiding principles are used for a consistent approach in linking together not just the platform / tools components but also the people and process aspects of data as managed through OS-C Data Commons:
 
 1. **Data as code:** All data and data handling logic should be treated as code. Creation, deprecation, and critical changes to data artifacts should go through a design review process with appropriate written documents where the community of contributors as well as data consumers’ views are taken into account. Changes in data sources, schema, pipeline logic have mandatory reviewers who sign off before changes are landed. Data artifacts have tests associated with them and are continuously tested. The same practices we apply to software code versioning and management are employed.
