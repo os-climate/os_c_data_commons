@@ -29,6 +29,12 @@ data:
           - http://superset-odh-superset.apps.odh-cl1.apps.os-climate.org/oauth-authorized/dex
         secretEnv: SUPERSET_SECRET
 
+      - id: trino
+        name: Trino
+        redirectURIs:
+          - https://trino-route-odh-trino.apps.odh-cl1.apps.os-climate.org/oauth2/callback
+        secretEnv: TRINO_SECRET
+
     connectors:
       - type: openshift
         id: openshift
