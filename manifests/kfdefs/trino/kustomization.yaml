@@ -13,3 +13,7 @@ secretGenerator:
     # Env vars needed: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
     envs:
       - .env
+  - name: trino-oauth
+    # Env vars needed: TRINO_OAUTH_SECRET
+    envs:
+      - .env2
