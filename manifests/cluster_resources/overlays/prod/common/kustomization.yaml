@@ -8,3 +8,4 @@ resources:
 
 patchesStrategicMerge:
   - groups/odh-admin.yaml
+  - groups/odh-users.yaml
