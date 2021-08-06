@@ -4,3 +4,10 @@ kind: Kustomization
 namespace: odh-superset
 resources:
   - kfdef.yaml
+generatorOptions:
+  disableNameSuffixHash: true
+secretGenerator:
+  - name: superset-oidc
+    # Env vars needed SUPERSET_SECRET_KEY
+    envs:
+      - .env
