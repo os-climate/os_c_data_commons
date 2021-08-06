@@ -2,48 +2,11 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   name: ml-pipeline-ui
-  namespace: kubeflow
-  uid: 32d04e80-68fd-454a-b93b-c7e801ecffe7
-  resourceVersion: '16890486'
-  creationTimestamp: '2021-08-06T19:52:23Z'
   labels:
     app: ml-pipeline-ui
     app.kubernetes.io/component: ml-pipeline
     app.kubernetes.io/name: kubeflow-pipelines
-  annotations:
-    openshift.io/host.generated: 'true'
-  managedFields:
-    - manager: Mozilla
-      operation: Update
-      apiVersion: route.openshift.io/v1
-      time: '2021-08-06T19:52:23Z'
-      fieldsType: FieldsV1
-      fieldsV1:
-        'f:metadata':
-          'f:labels':
-            .: {}
-            'f:app': {}
-            'f:app.kubernetes.io/component': {}
-            'f:app.kubernetes.io/name': {}
-        'f:spec':
-          'f:port':
-            .: {}
-            'f:targetPort': {}
-          'f:to':
-            'f:kind': {}
-            'f:name': {}
-            'f:weight': {}
-          'f:wildcardPolicy': {}
-    - manager: openshift-router
-      operation: Update
-      apiVersion: route.openshift.io/v1
-      time: '2021-08-06T19:52:23Z'
-      fieldsType: FieldsV1
-      fieldsV1:
-        'f:status':
-          'f:ingress': {}
 spec:
-  host: ml-pipeline-ui-kubeflow.apps.odh-cl1.apps.os-climate.org
   to:
     kind: Service
     name: ml-pipeline-ui
