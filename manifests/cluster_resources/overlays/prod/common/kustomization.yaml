@@ -4,6 +4,7 @@ kind: Kustomization
 
 resources:
   - ../../../base/user.openshift.io/groups/odh-admin
+  - ../../../base/user.openshift.io/groups/odh-users
 
 patchesStrategicMerge:
   - groups/odh-admin.yaml
