@@ -5,6 +5,7 @@ resources:
   - https://github.com/operate-first/apps/cloudbeaver/base
 patchesStrategicMerge:
   - add_configs.yaml
+  - secure-route.yaml
 generatorOptions:
   disableNameSuffixHash: true
 configMapGenerator:

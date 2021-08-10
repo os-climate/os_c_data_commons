@@ -4,6 +4,7 @@ kind: Kustomization
 namespace: odh-superset
 resources:
   - kfdef.yaml
+  - secure-route.yaml
 generatorOptions:
   disableNameSuffixHash: true
 secretGenerator:
