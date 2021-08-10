@@ -9,7 +9,7 @@ generatorOptions:
 secretGenerator:
   - name: odh-datacatalog-bucket
     literals:
-      - BUCKET=osc-demo-bucket-458a6c3f-c7e3-49c3-b95f-104ceada0703
+      - BUCKET=ocp-odh-os-demo-s3
     # Env vars needed: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
     envs:
       - .env
