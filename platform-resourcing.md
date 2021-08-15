@@ -3,9 +3,10 @@ Something like a google sheet doc might be easier for totaling columns. If one i
 
 - jupyter / jupyter-hub / elyra
 - object storage
+- dask
 - postgresql or other SQL
 - sqlite / datasette / sqlalchemy
-- superset
+- superset / d3 observable / plotly
 - spark
 - seldon
 - add more here...
