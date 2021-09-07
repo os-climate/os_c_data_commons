@@ -1,0 +1,1 @@
+# OS-Climate Data Commons Developer Guide: Setup GitOps pipeline
