@@ -17,7 +17,7 @@ One of the most important requirements to ensure data quality through reproducib
 
 ## Project templates
 
-The project template used as a starting point for new repositories can be found here: [project template][1]. It ties together data scientist needs (e.g. data, notebooks, models) and DevOps engineers needs (e.g. manifests). Having structure in a project ensures all the pieces required for the ML and DevOps lifecycles are present and easily discoverable.
+The project template used as a starting point for new repositories can be found here: [project template][1]. Based on the [Cookiecutter Data Science][2] approach, it ties together data scientist needs (e.g. data, notebooks, models) and DevOps engineers needs (e.g. manifests). Having structure in a project ensures all the pieces required for the ML and DevOps lifecycles are present and easily discoverable.
 
 ## Tutorial Steps
 
@@ -49,5 +49,6 @@ The project template used as a starting point for new repositories can be found 
 
 
 [1]: https://github.com/aicoe-aiops/project-template
+[2]: https://drivendata.github.io/cookiecutter-data-science/
 [4]: https://jupyter.org/hub
 [9]: https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/
