@@ -1,6 +1,6 @@
 # OS-Climate Data Commons Developer Guide
 
-This developer guide is for data engineers, data scientists and developers of the OS-Climate community who are looking at leveraging the OS-Climate Data Commons to build data ingestion and processing pipelines. It shows step-by-step how to configure your development environment, structure data pipeline projects, and manage data and code in a way that complies with our Architecture Blueprint. 
+This developer guide is for data engineers, data scientists and developers of the OS-Climate community who are looking at leveraging the OS-Climate Data Commons to build data ingestion and processing pipelines. It shows step-by-step how to configure your development environment, structure data pipeline projects, and manage data and code in a way that complies with our Architecture Blueprint.
 
 ## Tools
 
@@ -17,7 +17,7 @@ One of the most important requirements to ensure data quality through reproducib
 
 ## Project templates
 
-The project template used as a starting point for new repositories can be found here: [project template][1]. Based on the [Cookiecutter Data Science][2] approach, it ties together data scientist needs (e.g. data, notebooks, models) and DevOps engineers needs (e.g. manifests). Having structure in a project ensures all the pieces required for the ML and DevOps lifecycles are present and easily discoverable.
+The project template used as a starting point for new repositories can be found here: [project template][1]. It ties together data scientist needs (e.g. data, notebooks, models) and DevOps engineers needs (e.g. manifests). Having structure in a project ensures all the pieces required for the ML and DevOps lifecycles are present and easily discoverable.
 
 ## Tutorial Steps
 
@@ -32,7 +32,7 @@ The project template used as a starting point for new repositories can be found 
 3. [Push changes to GitHub](./docs/push-changes.md)
 
 4. [Setup pipelines to create releases, build images and enable dependency management](./docs/setup-gitops-pipeline.md)
-   
+
 ### DataOps Lifecycle
 
 5. [Create a Data Ingestion Pipeline](./docs/create-ingestion-pipeline.md)
@@ -47,8 +47,6 @@ The project template used as a starting point for new repositories can be found 
 
 9. [Monitor your inference application deployed](./docs/monitor-model.md)
 
-
 [1]: https://github.com/aicoe-aiops/project-template
-[2]: https://drivendata.github.io/cookiecutter-data-science/
 [4]: https://jupyter.org/hub
 [9]: https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/
