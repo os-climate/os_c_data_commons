@@ -4,7 +4,7 @@ This section covers how to  setup your development environment as a contributor 
 
 ## 1. Create new GitHub repository for pipeline development
 
-In order to have a standardized structure that can be easily understood by data scientists, devops engineers and developers, repositories should be created by the on the project template [here][1]. You can click the `Use the template` button provided in the repository and create the structure for your repo this way.
+In order to have a standardized structure that can be easily understood by data scientists, devops engineers and developers, repositories should be created by the on the project template [here][1]. You can click the `Use the template` button provided in the repository and create the structure for your repo this way.   *Take care to select **OS-Climate** as the owner; the default is to create under your own GitHub ID, which may not be your intention if you are contributing to OS-Climate.*
 
 ![Repository Template](../images/developer_guide/aicoe-project-template.png)
 
