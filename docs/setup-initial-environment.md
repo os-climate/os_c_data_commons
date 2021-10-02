@@ -58,7 +58,9 @@ Once you are in the Jupyterlab UI, you can use the Git extension provided to clo
 
 ![Cloning a Git repository](../images/developer_guide/jupyterhub-gitclone.png)
 
-2. Enter the HTTPS address of the repository you want to clone. You are ready to go!
+2. Enter the HTTPS address of the repository you want to clone. If it is private and you have access, enter your credentials when requested.
+
+3. You are ready to go!
 
 
 ## Next Step
