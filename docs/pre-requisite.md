@@ -14,7 +14,7 @@ This list provides the requirements for newly onboarded contributors to the OS-C
 
 ## Additional S3 Bucket and Trino Access
 
-1. When providing development access to Data Commons platform (item 2 as part of the GitHub Setup above), a Read access to relevant source data, R/W access to the relevant S3 buckets for data ingestions & processing, and R/W access to relevant Trino catalogs and schemas should be created. For additional bucket or catalog creation, or for a Read access to other data sources (if you need to access the data in another pipeline or for reporting purpose), raise an issue against [OS-C Data Commons Repository][1] with the subject as "Access request for S3 / Trino" with the information about the access required including data pipeline repositories you need to contribute to and relevant data sets that need to be accessed.
+1. When providing development access to Data Commons platform (item 2 as part of the GitHub Setup above), a Read access to relevant source data, R/W access to the relevant S3 buckets for data ingestions & processing, and R/W access to relevant Trino catalogs and schemas should be created. For additional bucket or catalog creation, or for a Read access to other data sources (if you need to access the data in another pipeline or for reporting purpose), raise an issue against [OS-Climate Data Commons Repository][1] with the subject as "Access request for S3 / Trino" with the information about the access required including data pipeline repositories you need to contribute to and relevant data sets that need to be accessed.
 
 ## Next Step
 
