@@ -10,7 +10,19 @@ In order to have a standardized structure that can be easily understood by data 
 
  Having a defined structure in a project ensures all the pieces required for the ML and DevOps lifecycles are present and easily discoverable and allows managing library dependencies, notebooks, test data, documentation, etc. For more information on this topic, we recommend reading and understanding the [Cookiecutter Data Science][2] documentation, on which our standard repository template is inspired.
 
-## 2. Access the development environment with Elyra images on JupyterHub
+## 2. Make your repository open-source friendly
+
+1. Add the APL 2.0 Open Source license to your repository. This is done by going into your repository, creating a new file called "LICENSE", clicking the button `Choose a license template` on the right, selecting the Apache License 2.0 template and then committing the proposed change.
+
+![Open Source license](../images/developer_guide/repo-choose-license.png)
+
+2. Explain what the repository is about in the "README.md" file created in the repository root.
+
+3. Document the contribution structure of your repository for you and your trusted collaborators in the "OWNERS" file found in the repository root.
+
+4. Confirm whether DCO / CLA covers this repository.
+
+## 3. Access the development environment with Elyra images on JupyterHub
 
 With your GitHub credentials and once you are part of the team odh-env-users, you will be able to access the development environment.
 
@@ -23,10 +35,9 @@ With your GitHub credentials and once you are part of the team odh-env-users, yo
 ![Jupyter Hub Server Start](../images/developer_guide/jupyterhub-startserver.png)
 
 3. Your server should start automatically after a couple of minutes and the Jupyter launcher appear.
-
 ![Jupyter Hub Launcher](../images/developer_guide/jupyterhub-launcher.png)
 
-## 3. Set your credentials environment variables
+## 4. Set your credentials environment variables
 
 From the File menu, create a New text file called credentials.env. The format of this file should be following this template:
 
@@ -48,20 +59,19 @@ From the File menu, create a New text file called credentials.env. The format of
     TRINO_USER=<your github id>
     TRINO_PASSWD=<your Trino JWT token>
 
-To secure and restrict the access to data based on user profiles, we have defined role-based accessc controls to specific schemas in Trino based on your team assignments. Therefore, authentication with the Trino service has been federated with GitHub SSO and on a weekly basis you will need to retrieve a JWT token from this [Token Retrieval Client][3]. Get the token and cut / paste the token string as your TRINO_PASSWD in the credentials file. 
+To secure and restrict the access to data based on user profiles, we have defined role-based accessc controls to specific schemas in Trino based on your team assignments. Therefore, authentication with the Trino service has been federated with GitHub SSO and on a weekly basis you will need to retrieve a JWT token from this [Token Retrieval Client][3]. Get the token and cut / paste the token string as your TRINO_PASSWD in the credentials file.
 
-## 4. Access your repo using Jupyterlab Git Extension
+## 5. Access your repo using Jupyterlab Git Extension
 
 Once you are in the Jupyterlab UI, you can use the Git extension provided to clone this repo.
 
 1. Click the Git extension button from Jupyterlab UI and select `Clone a repository`:
-
+   
 ![Cloning a Git repository](../images/developer_guide/jupyterhub-gitclone.png)
 
 2. Enter the HTTPS address of the repository you want to clone. If it is private and you have access, enter your credentials when requested.
-
+   
 3. You are ready to go!
-
 
 ## Next Step
 
