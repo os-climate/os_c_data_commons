@@ -1,12 +1,7 @@
 # OS-Climate Data Commons Developer Guide: Explore notebooks and manage dependencies
 
-0. Make it Open Source Friendly
-   1. Select APL 2.0 LICENSE
-   2. Explain what you are doing in README.md
-   3. Put yourself and your trusted collaborators in the OWNERS file
-   4. Confirm DCO / CLA covers this repository
-2. Add dependencies to Pipfile in the [packages] section.
-3. Create a notebook with basic ingest flow:
+1. Add dependencies to Pipfile in the [packages] section.
+2. Create a notebook with basic ingest flow:
    1. Load credentials from *credentials.env* file
    2. Create S3 resource for source file or files.  Credentials give access to OS-Climate private buckets.  To access a public S3 bucket from *e.g.* WRI, use this:
       ```
@@ -27,5 +22,5 @@
       3. Update access control rules (HOW?)
       4. Update metadata information (HOW!?)
       5. Update version information (HOW!?)
- 3. Test your work (HOW?!)
- 4. Done!
+ 1. Test your work (HOW?!)
+ 2. Done!
