@@ -2,6 +2,10 @@
 
 To go through a typical ingestion pipeline, we will use an ingestion example from our [data-platform-demo repository](https://github.com/os-climate/data-platform-demo), which is a demo notebook showing how the ingestion process from source data buckets to a Trino schema in our Development or Production Data Buckets. The sample we will use is [PUDL Data Ingestion Sample](https://github.com/os-climate/data-platform-demo/blob/master/notebooks/pudl_ingestion_sample.ipynb) which shows the following steps required in ingesting data:
 
+## 0. Create a branch in which you will do your work.
+
+Creating branches for different changes makes it a lot easier to collaborate with others and use CD/CI tools.  If you only ever check in changes to the `main` branch, you will likely find yourself the only one able to work on that code base.
+
 ## 1. Connect to and retrieve source data from a S3 source data bucket
 
 S3 source data bucket are read-only buckets used purely for source data retrieval. This can be done from:
