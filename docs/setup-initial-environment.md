@@ -35,6 +35,7 @@ With your GitHub credentials and once you are part of the team odh-env-users, yo
 ![Jupyter Hub Server Start](../images/developer_guide/jupyterhub-startserver.png)
 
 3. Your server should start automatically after a couple of minutes and the Jupyter launcher appear.
+
 ![Jupyter Hub Launcher](../images/developer_guide/jupyterhub-launcher.png)
 
 ## 4. Set your credentials environment variables
@@ -53,7 +54,7 @@ From the File menu, create a New text file called credentials.env. The format of
     S3_DEV_ACCESS_KEY=<replace with the access key provided to you>
     S3_DEV_SECRET_KEY=<replace with the secret key provided to you>
 
-        # Trino Credentials
+    # Trino Credentials
     TRINO_HOST=trino-secure-odh-trino.apps.odh-cl1.apps.os-climate.org
     TRINO_PORT=443
     TRINO_USER=<your github id>
