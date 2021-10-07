@@ -68,3 +68,7 @@ This is done by extracting the data to be ingested into a Pandas data frame - th
     cur.execute(tabledef)
     cur.fetchall()
 ````
+
+## 3.  Define Access Controls
+
+Please fill in.
