@@ -24,7 +24,7 @@ S3 source data bucket are read-only buckets used purely for source data retrieva
 
 ## 2. Transfer the data into a Parquet file on S3 development or production data bucket
 
-This is done by extracting the data to be ingested into a Pandas data frame - this often requires using *pandas.read_csv* or *pandas.read_excel* - then generating a Parquet file from the data frame. To upload to the S3 development or production data bucket, follow this five step process:
+This is done by extracting the data to be ingested into a Pandas data frame - this often requires using *pandas.read_csv* or *pandas.read_excel* - then generating a Parquet file from the data frame. To upload to the S3 development or production data bucket, follow this five step process (examplified here: https://github.com/os-climate/wri-gppd-ingestion-pipeline/blob/master/notebooks/WRI-gppd-ingest.ipynb):
 
 ### 2.1 Convert the pandas dataframe to pyarrow for type conversion and basic metadata
 ### 2.2 Since pyarrow tables are immutable, create a new table with additional combined metadata
