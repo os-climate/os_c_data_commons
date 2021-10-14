@@ -24,7 +24,15 @@ S3 source data bucket are read-only buckets used purely for source data retrieva
 
 ## 2. Transfer the data into a Parquet file on S3 development or production data bucket
 
-This is done by extracting the data to be ingested into a Pandas data frame - this often requires using *pandas.read_csv* or *pandas.read_excel* - then generating a Parquet file from the data frame and upload the parquet file on either the S3 development or production data bucket. These buckets are used for storing data to be ingested into Trino, the open source distributed SQL query engine that we use to federate data across tabular sources for ingested and processed data. The process requires:
+This is done by extracting the data to be ingested into a Pandas data frame - this often requires using *pandas.read_csv* or *pandas.read_excel* - then generating a Parquet file from the data frame. To upload to the S3 development or production data bucket, follow this five step process:
+
+### 2.1 Convert the pandas dataframe to pyarrow for type conversion and basic metadata
+### 2.2 Since pyarrow tables are immutable, create a new table with additional combined metadata
+### 2.3 Convert table to parquet format (which cannot be written directly to s3)
+### 2.4 Put the parquet-ified data into an S3 bucket for trino.
+### 2.5 Create the trino table backed by our parquet files enhanced by field-level and table-level metadata
+
+These buckets are used for storing data to be ingested into Trino, the open source distributed SQL query engine that we use to federate data across tabular sources for ingested and processed data. The process requires:
 
 1. Creating a boto3 client connection to S3 development or production data bucket using the credentials provided in the relevant secret for the particular bucket.
 ```
@@ -35,7 +43,7 @@ This is done by extracting the data to be ingested into a Pandas data frame - th
         aws_secret_access_key=os.environ['S3_DEV_SECRET_KEY'],
     )
 ```
-2. Uploading the parquet file for ingestion into the bucket, using the following folder structure /trino/{trino_schema_name}/{trino_table_name}/{trino_table_name}.parquet. It should be noted that the convention for data ingestion is to use the name of the data source as the schema name, and the name of the data set as table name.
+2. Uploading the parquet file for ingestion into the bucket, using the following folder structure /trino/{trino_schema_name}/{trino_table_name}/{uuid}/{trino_table_name}.parquet. It should be noted that the convention for data ingestion is to use the name of the data source as the schema name, and the name of the data set as table name.
 
 3. Open a Trino connection using the Trino connection credentials in your credentials.env based on your [environment setup as described here](./setup-initial-environment.md). Note that the Trino token to be retrieved has a one-week validity and you may require to regenerate the token and update your credentials.env accordingly.
 ```
@@ -62,8 +70,8 @@ This is done by extracting the data to be ingested into a Pandas data frame - th
         {schema}
         ) with (
         format = 'parquet',
-        external_location = 's3a://{bucket}/trino/pudl/{tname}/'
-    )""".format(schema=schema,bucket=os.environ['S3_DEV_BUCKET'],tname=tablename)
+        external_location = 's3a://{bucket}/trino/{sname}/{tname}/{uuid}'
+    )""".format(schema=schema,bucket=os.environ['S3_DEV_BUCKET'],sname=schemaname,tname=tablename,uuid=ingest_uuid)
     print(tabledef)
     cur.execute(tabledef)
     cur.fetchall()
