@@ -56,3 +56,6 @@ OpenShift's build systems further assume that *all* of your build dependencies a
 Deviating from this directory layout is possible, but it generally requires editing your `BuildConfig` as a YAML file and setting the `dockerfilePath` field.
 See: https://docs.openshift.com/container-platform/3.4/dev_guide/builds/build_strategies.html#dockerfile-path
 
+### Credential management
+
+Say some smart things about this topic when we have smart things to say.
