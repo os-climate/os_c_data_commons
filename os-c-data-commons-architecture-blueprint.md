@@ -2,7 +2,7 @@
 
 ## Overview
 
-![OS-C Data Commons Platform Overview](https://github.com/os-climate/os_c_data_commons/docs/images/architecture/COP26-Overview-Technical.png)
+![OS-C Data Commons Platform Overview](https://github.com/os-climate/os_c_data_commons/blob/main/images/architecture/COP26-Overview-Technical.png)
 
 ## Guiding Principles
 
