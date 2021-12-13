@@ -6,8 +6,8 @@ This developer guide is for data engineers, data scientists and developers of th
 
 In this guide the following technologies are showcased:
 
-- [JupyterHub][4] to launch images with Jupyter tooling
-- [Kubeflow Pipelines][9] for end to end experiments using pipelines
+- [JupyterHub][2] to launch images with Jupyter tooling
+- [Kubeflow Pipelines][3] for end to end experiments using pipelines
 
 ## GitOps for reproducibility, portability, traceability with AI support
 
@@ -38,15 +38,17 @@ The project template used as a starting point for new repositories can be found 
 5. [Create a Data Ingestion Pipeline](./docs/create-ingestion-pipeline.md)
 
 6. [Create a Data Processing Pipeline](./docs/create-processing-pipeline.md)
+   
+7. [Manage Data Security & Compliance](.docs/manage-security-compliance.md)
 
-### DevOps Lifecycle
+### ModelOps Lifecycle
 
-7. [Setup and Deploy Inference Application](./docs/deploy-model.md)
+8. [Setup and Deploy Inference Application](./docs/deploy-model.md)
 
-8. [Test Deployed inference application](./docs/test-model.md)
+9. [Test Deployed inference application](./docs/test-model.md)
 
-9. [Monitor your inference application deployed](./docs/monitor-model.md)
+10. [Monitor your inference application deployed](./docs/monitor-model.md)
 
 [1]: https://github.com/aicoe-aiops/project-template
-[4]: https://jupyter.org/hub
-[9]: https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/
+[2]: https://jupyter.org/hub
+[3]: https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/

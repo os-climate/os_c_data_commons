@@ -1,5 +1,9 @@
 # OS-C Data Commons Architecture Blueprint
 
+## Overview
+
+![OS-C Data Commons Platform Overview](https://github.com/os-climate/os_c_data_commons/docs/images/architecture/COP26-Overview-Technical.png)
+
 ## Guiding Principles
 
 These guiding principles are used for a consistent approach in linking together not just the platform / tools components but also the people and process aspects of data as managed through OS-C Data Commons:
@@ -18,20 +22,6 @@ These guiding principles are used for a consistent approach in linking together 
 
 This section covers key design domains in the platform, and for each of these domains the key design drivers behind the target architecture blueprint.
 
-### Data Pipeline Management
-
-- **DPM-001 - Distributed data mesh architecture:** Pipeline management in OS-C Data Commons platform is based on a distributed data mesh architectural paradigm, in order to support rapid onboarding of an ever-growing number of distributed domain data sets, and the expected proliferation of consumption scenarios such as reporting, analytical tools and machine learning across the growing OS-C community. This means having small units of data pipelines that are highly re-usable across multiple development streams with well-defined and documented integration / consumption models.
-
-![OS-C Data Commons Data Pipeline Architecture](https://github.com/os-climate/os_c_data_commons/blob/main/images/OS-C%20Data%20Commons%20Pipeline.png)
-
-- **DPM-002 - Use a multi-layered approach for data processing / engineering:** Data Engineering Pipelines which focus on handling Extraction / Transformation / Loading (ETL) from multimodal external data sources and data normalisation, shall have a dedicated pipeline by business domain layer, managed in a dedicated code repository. The data processing should follow a multi-layered approach for decoupling and easy maintenance of the processing logic:
-
-    Ingestion: This layer handles the collection of raw data in a wide variety (structured, semistructured, and unstructured) from various sources (such as external file-based systems, external APIs, IoT devices) at any speed (batch or stream) and scale.
-
-    Storage: This layer takes care of storing the data in secure, flexible, and efficient storage for internal processing. This can typically be a relational database, a graph database, a NoSQL database, an in-memory data cache or even an event streaming pipeline. This should include managing relevant business and technical metadata that allows us to understand the data’s origin, format, lineage, and how it is organised, classified and connected.
-
-    Processing: This layer turns the raw data into consumable, by sorting, filtering, splitting, enriching, aggregating, joining, and applying any required business logic to produce new meaningful data sets. At this layer, we harmonise and simplify the disparate data sources by combining various data sets and build a unified business domain layer, which can be reused for various analytics and reporting use cases.
-
-    Distribution: This layer provides the consumer of the data the ability to use the post-processed data, by performing ad-hoc queries, producing views which are organised into reports and dashboards or upstream it for ML use in other pipelines. This layer is designed for reusability, discoverability, and backfilling.
-
-- **DPM-003 - Manage data pipelines and training data sets as code for reproducibility:** Data pipelines design should ensure both audit-ability and reproducibility, which is the ability to re-process the same source data with the same workflow / model version to reach the same conclusion as a previous work state. This means in particular for pipelines leveraging machine learning, the data pipeline implementation should support a snapshot of the raw, curated and model input data to be saved / versioned / metadata-tagged every time a model is trained and associated with a specific version of pipeline source code (maintained in the Github repository). Training data should also be made available for external consumption by other work streams requiring similar model training.
+1. [Data Infrastructure-as-a-Platform](./docs/add-data-infra-as-a-platform.md)
+2. [Data Pipeline Management](./docs/add-data-pipeline-management.md)
+3. [Federated Data Management and Governance](./docs/add-federated-governance.md)
