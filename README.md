@@ -8,7 +8,7 @@ OS-Climate Data Commons is a unified, open Multimodal Data Processing platform u
 
 ## Overview
 
-![OS-C Data Commons Platform Overview](https://github.com/os-climate/os_c_data_commons/docs/images/architecture/COP26-Overview-Business.png)
+![OS-C Data Commons Platform Overview](../os_c_data_commons/images/architecture/COP26-Overview-Business.png)
 
 The Data Commons platform aims at bridging climate-related data gaps across 3 dimensions:
 
