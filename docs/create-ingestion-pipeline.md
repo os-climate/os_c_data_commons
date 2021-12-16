@@ -11,6 +11,7 @@ Creating branches for different changes makes it a lot easier to collaborate wit
 S3 source data bucket are read-only buckets used purely for source data retrieval. This can be done from:
 
 1. A private S3 bucket for an OS-Climate Source Data Landing Zone. We have a private bucket (redhat-osc-physical-landing-647521352890) for public sources that need to be downloaded physically for ingestion, and private buckets by data source for each private data source that is contributed to our initiative. Access to the S3 bucket is then managed via a dedicated secret embedding the required credentials - if you need access to specific source data please check the section on [OS-Climate Data Commons Developer Guide: Pre-Requisite](./pre-requisite.md). For retrieval of data files we advise using the boto3 resource API which provides efficient handling of bucket and object-level data. The following code shows how to access a given bucket:
+
 ```
     s3_resource = boto3.resource(
         service_name="s3",
@@ -20,7 +21,8 @@ S3 source data bucket are read-only buckets used purely for source data retrieva
     )
     bucket = s3_resource.Bucket(os.environ['S3_LANDING_BUCKET'])
 ```
-2. A public S3 bucket for any data source that can be directly "federated" in the ingestion process from the source data provider. In this case, you can typically access the bucket through unsigned access as shown ou our [GLEIF Data Ingestion Sample](https://github.com/os-climate/data-platform-demo/blob/master/notebooks/gleif_ingestion_sample.ipynb).
+
+1. A public S3 bucket for any data source that can be directly "federated" in the ingestion process from the source data provider. In this case, you can typically access the bucket through unsigned access as shown ou our [GLEIF Data Ingestion Sample](https://github.com/os-climate/data-platform-demo/blob/master/notebooks/gleif_ingestion_sample.ipynb).
 
 ## 2. Transfer the data into a Parquet file on S3 development or production data bucket
 
@@ -35,6 +37,7 @@ This is done by extracting the data to be ingested into a Pandas data frame - th
 These buckets are used for storing data to be ingested into Trino, the open source distributed SQL query engine that we use to federate data across tabular sources for ingested and processed data. The process requires:
 
 1. Creating a boto3 client connection to S3 development or production data bucket using the credentials provided in the relevant secret for the particular bucket.
+   
 ```
     s3 = boto3.client(
         service_name="s3",
@@ -43,9 +46,11 @@ These buckets are used for storing data to be ingested into Trino, the open sour
         aws_secret_access_key=os.environ['S3_DEV_SECRET_KEY'],
     )
 ```
-2. Uploading the parquet file for ingestion into the bucket, using the following folder structure /trino/{trino_schema_name}/{trino_table_name}/{uuid}/{trino_table_name}.parquet. It should be noted that the convention for data ingestion is to use the name of the data source as the schema name, and the name of the data set as table name.
 
-3. Open a Trino connection using the Trino connection credentials in your credentials.env based on your [environment setup as described here](./setup-initial-environment.md). Note that the Trino token to be retrieved has a one-week validity and you may require to regenerate the token and update your credentials.env accordingly.
+1. Uploading the parquet file for ingestion into the bucket, using the following folder structure /trino/{trino_schema_name}/{trino_table_name}/{uuid}/{trino_table_name}.parquet. It should be noted that the convention for data ingestion is to use the name of the data source as the schema name, and the name of the data set as table name.
+
+2. Open a Trino connection using the Trino connection credentials in your credentials.env based on your [environment setup as described here](./setup-initial-environment.md). Note that the Trino token to be retrieved has a one-week validity and you may require to regenerate the token and update your credentials.env accordingly.
+
 ```
     conn = trino.dbapi.connect(
         host=os.environ['TRINO_HOST'],
@@ -57,14 +62,18 @@ These buckets are used for storing data to be ingested into Trino, the open sour
     )
     cur = conn.cursor()
 ```
-4. Create a new schema as required if the ingestion source is new. This is done by creating a schema under osc_datacommons_dev catalogue (the Trino development catalogue) or osc_datacommons_prod (the Trino production catalogue) via an SQL command through Trino connection as per this example:
+
+3. Create a new schema as required if the ingestion source is new. This is done by creating a schema under osc_datacommons_dev catalogue (the Trino development catalogue) or osc_datacommons_prod (the Trino production catalogue) via an SQL command through Trino connection as per this example:
+
 ```
     cur.execute('create schema if not exists osc_datacommons_dev.pudl')
     cur.fetchall()
 ```
-5. Generate the Trino table schema from the dataframe, using the function generate_table_schema_pairs on the data frame with the source data.
 
-6. Finally the data can be ingested into Trino from the parquet file using the schema generated in step 5.
+4. Generate the Trino table schema from the dataframe, using the function generate_table_schema_pairs on the data frame with the source data.
+
+5. Finally the data can be ingested into Trino from the parquet file using the schema generated in step 5.
+
 ```
     tabledef = """create table if not exists osc_datacommons_dev.pudl.{tname}(
         {schema}
@@ -76,7 +85,3 @@ These buckets are used for storing data to be ingested into Trino, the open sour
     cur.execute(tabledef)
     cur.fetchall()
 ````
-
-## 3.  Define Access Controls
-
-Please fill in.
