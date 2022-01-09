@@ -6,8 +6,11 @@ This developer guide is for data engineers, data scientists and developers of th
 
 In this guide the following technologies are showcased:
 
-- [JupyterHub][2] to launch images with Jupyter tooling
-- [Kubeflow Pipelines][3] for end to end experiments using pipelines
+- [GitHub][2] and [GitHub Projects][3] ([link to Data Commons project board](https://github.com/orgs/os-climate/projects/7))
+- [JupyterHub][4] to launch images with Jupyter tooling ([link to actual instance](https://jupyterhub-odh-jupyterhub.apps.odh-cl1.apps.os-climate.org/))
+- [Kubeflow Pipelines][5] for end to end experiments using pipelines
+- [SuperSet][6] data visualation dashboards ([link to superset instance](https://superset-secure-odh-superset.apps.odh-cl1.apps.os-climate.org/))
+- [Trino][7] distributed query engine encapsulating data storage, metadata, and access management
 
 ## GitOps for reproducibility, portability, traceability with AI support
 
@@ -50,5 +53,9 @@ The project template used as a starting point for new repositories can be found 
 10. [Monitor your inference application deployed](./docs/monitor-model.md)
 
 [1]: https://github.com/aicoe-aiops/project-template
-[2]: https://jupyter.org/hub
-[3]: https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/
+[2]: https://github.com/
+[3]: https://docs.github.com/en/issues/trying-out-the-new-projects-experience/about-projects
+[4]: https://jupyter.org/hub
+[5]: https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/
+[6]: https://superset.apache.org/
+[7]: https://trino.io/docs/current/overview/concepts.html
