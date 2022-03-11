@@ -7,9 +7,9 @@ This developer guide is for data engineers, data scientists and developers of th
 In this guide the following technologies are showcased:
 
 - [GitHub][2] and [GitHub Projects][3] ([link to Data Commons project board](https://github.com/orgs/os-climate/projects/7))
-- [JupyterHub][4] to launch images with Jupyter tooling ([link to cl1 instance](https://jupyterhub-odh-jupyterhub.apps.odh-cl1.apps.os-climate.org/) [link to cl2 instance](https://jupyterhub-odh-jupyterhub.apps.odh-cl2.apps.os-climate.org/))
+- [JupyterHub][4] to launch images with Jupyter tooling ([link to cl1 instance](https://jupyterhub-odh-jupyterhub.apps.odh-cl1.apps.os-climate.org/) :: [link to cl2 instance](https://jupyterhub-odh-jupyterhub.apps.odh-cl2.apps.os-climate.org/))
 - [Kubeflow Pipelines][5] for end to end experiments using pipelines
-- [SuperSet][6] data visualation dashboards ([link to superset cl1 instance](https://superset-secure-odh-superset.apps.odh-cl1.apps.os-climate.org/) [link to superset cl2 instance](https://superset-secure-odh-superset.apps.odh-cl2.apps.os-climate.org/))
+- [SuperSet][6] data visualation dashboards ([link to superset cl1 instance](https://superset-secure-odh-superset.apps.odh-cl1.apps.os-climate.org/) :: [link to superset cl2 instance](https://superset-secure-odh-superset.apps.odh-cl2.apps.os-climate.org/))
 - [Trino][7] distributed query engine encapsulating data storage, metadata, and access management
 
 ## GitOps for reproducibility, portability, traceability with AI support
