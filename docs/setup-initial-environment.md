@@ -40,25 +40,10 @@ With your GitHub credentials and once you are part of the team odh-env-users, yo
 
 ## 4. Set your credentials environment variables
 
-From the File menu, create a New text file called credentials.env. The format of this file should be following this template:
-
-    # S3 Credentials for Source Data Landing Zone 
-    S3_LANDING_ENDPOINT=https://s3.us-east-1.amazonaws.com
-    S3_LANDING_BUCKET=redhat-osc-physical-landing-647521352890
-    S3_LANDING_ACCESS_KEY=<replace with the access key provided to you>
-    S3_LANDING_SECRET_KEY=<replace with the secret key provided to you>
-
-    # S3 Credentials for Development Data Bucket 
-    S3_DEV_ENDPOINT=https://s3.us-east-1.amazonaws.com
-    S3_DEV_BUCKET=ocp-odh-os-demo-s3
-    S3_DEV_ACCESS_KEY=<replace with the access key provided to you>
-    S3_DEV_SECRET_KEY=<replace with the secret key provided to you>
-
-    # Trino Credentials
-    TRINO_HOST=trino-secure-odh-trino.apps.odh-cl1.apps.os-climate.org
-    TRINO_PORT=443
-    TRINO_USER=<your github id>
-    TRINO_PASSWD=<your Trino JWT token>
+From the File menu, create a new text file called `credentials.env`.
+You can copy this file from [this link](https://github.com/os-climate/os_c_data_commons/blob/main/docs/credentials.env)
+This example file includes links the JWT token retrieval client for Trino access.
+Access credentials for the OSC physical landing S3 bucket are provided on request.
 
 To secure and restrict the access to data based on user profiles, we have defined role-based accessc controls to specific schemas in Trino based on your team assignments. Therefore, authentication with the Trino service has been federated with GitHub SSO and on a weekly basis you will need to retrieve a JWT token from this [Token Retrieval Client][3]. Get the token and cut / paste the token string as your TRINO_PASSWD in the credentials file.
 
