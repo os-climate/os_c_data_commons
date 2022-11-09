@@ -64,5 +64,5 @@ Once you are in the Jupyterlab UI, you can use the Git extension provided to clo
 [Explore notebooks and manage dependencies](./explore-notebooks-and-manage-dependencies.md)
 
 [1]: https://github.com/aicoe-aiops/project-template
-[2]: https://jupyterhub-odh-jupyterhub.apps.odh-cl1.apps.os-climate.org/
-[3]: https://das-odh-trino.apps.odh-cl1.apps.os-climate.org/
+[2]: https://jupyterhub-odh-jupyterhub.apps.odh-cl2.apps.os-climate.org/
+[3]: https://das-odh-trino.apps.odh-cl2.apps.os-climate.org/
