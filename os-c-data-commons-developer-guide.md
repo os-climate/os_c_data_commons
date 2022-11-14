@@ -2,6 +2,12 @@
 
 This developer guide is for data engineers, data scientists and developers of the OS-Climate community who are looking at leveraging the OS-Climate Data Commons to build data ingestion and processing pipelines. It shows step-by-step how to configure your development environment, structure data pipeline projects, and manage data and code in a way that complies with our Architecture Blueprint.
 
+ - **Need Help?** 
+   - Outage/System Failures:  File an Linux Foundation (LF) [outage ticket](https://jira.linuxfoundation.org/plugins/servlet/desk/portal/2/create/30) (note: select OS-Climate from project list)
+   - New infrastructure request (e.g., software upgrade):  File an LF [ticket](https://jira.linuxfoundation.org/plugins/servlet/desk/portal/2) (note: select OS-Climate from project list)
+   - General infrastructure support:  Get help on Slack [ODH channel](https://operatefirst.slack.com/archives/C01RMPVUUK1)
+   - Data Commons support: Get help on Slack [Data Commons channel](https://os-climate.slack.com/archives/C034SCF92BU)  OR [Developers channel](https://os-climate.slack.com/archives/C034SCQU919)
+
 ## Tools
 
 In this guide the following technologies are showcased:
