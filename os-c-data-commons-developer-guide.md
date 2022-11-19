@@ -17,6 +17,8 @@ In this guide the following technologies are showcased:
 - [Kubeflow Pipelines][5] for end to end experiments using pipelines
 - [SuperSet][6] data visualation dashboards ([link to superset cl1 instance](https://superset-secure-odh-superset.apps.odh-cl1.apps.os-climate.org/) :: [link to superset cl2 instance](https://superset-secure-odh-superset.apps.odh-cl2.apps.os-climate.org/))
 - [Trino][7] distributed query engine encapsulating data storage, metadata, and access management
+- [Grafana](https://grafana.com/docs/grafana/latest/introduction/) enables you to query, visualize, alert on, and explore your metrics, logs, and traces wherever they are stored. Grafana OSS provides you with tools to turn your time-series database (TSDB) data into insightful graphs and visualizations. [link to cl2 instance](https://grafana-opf-monitoring.apps.odh-cl2.apps.os-climate.org/login)
+- [INCEpTION](https://inception-project.github.io/releases/25.5/docs/user-guide.html) is a text-annotation environment primarily used by OS-C for machine learning-based data extraction. [Link to cl2 instance](https://inception-inception.apps.odh-cl2.apps.os-climate.org/) :: [link to cl1 instance](https://inception-inception.apps.odh-cl1.apps.os-climate.org/)
 
 ## GitOps for reproducibility, portability, traceability with AI support
 
