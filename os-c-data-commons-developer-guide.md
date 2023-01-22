@@ -2,11 +2,12 @@
 
 This developer guide is for data engineers, data scientists and developers of the OS-Climate community who are looking at leveraging the OS-Climate Data Commons to build data ingestion and processing pipelines, as well as AI / ML pipelines. It shows step-by-step how to configure your development environment, structure projects, and manage data and code in a way that complies with our Architecture Blueprint.
 
- - **Need Help?** 
-   - Outage/System Failures:  File an Linux Foundation (LF) [outage ticket](https://jira.linuxfoundation.org/plugins/servlet/desk/portal/2/create/30) (note: select OS-Climate from project list)
-   - New infrastructure request (e.g., software upgrade):  File an LF [ticket](https://jira.linuxfoundation.org/plugins/servlet/desk/portal/2) (note: select OS-Climate from project list)
-   - General infrastructure support:  Get help on Slack [ODH channel](https://operatefirst.slack.com/archives/C01RMPVUUK1)
-   - Data Commons support: Get help on Slack [Data Commons channel](https://os-climate.slack.com/archives/C034SCF92BU)  OR [Developers channel](https://os-climate.slack.com/archives/C034SCQU919)
+**Need Help?**
+
+- Outage / System failure:  File an Linux Foundation (LF) [outage ticket](https://jira.linuxfoundation.org/plugins/servlet/desk/portal/2/create/30) (note: select OS-Climate from project list)
+- New infrastructure request (e.g. software upgrade):  File an LF [ticket](https://jira.linuxfoundation.org/plugins/servlet/desk/portal/2) (note: select OS-Climate from project list)
+- General infrastructure support:  Get help on OS-Climate Slack [Data Commons channel](https://os-climate.slack.com/archives/C034SCF92BU)
+- Data Commons developer support: Get help on OS-Climate Slack [Developers channel](https://os-climate.slack.com/archives/C034SCQU919)
 
 ## Tools
 
@@ -17,15 +18,17 @@ Pipeline development leverages a number of tools provided by Data Commons. The l
 | [GitHub][2] | Version control tool used to maintain the pipelines as code | [OS-Climate GitHub](https://github.com/os-climate) |
 | [GitHub Projects][3] | Project tracking tool that integrates issues and pull requests | [Data Commons Project Board](https://github.com/orgs/os-climate/projects/7) |
 | [JupyterHub][4] | Self-service environment for Jupyter notebooks used to develop pipelines | [JupyterHub Development Instance](https://jupyterhub-odh-jupyterhub.apps.odh-cl2.apps.os-climate.org/) |
-
-
-
-
-- [Kubeflow Pipelines][5] for end to end experiments using pipelines
-- [SuperSet][6] data visualation dashboards ([link to superset cl1 instance](https://superset-secure-odh-superset.apps.odh-cl1.apps.os-climate.org/) :: [link to superset cl2 instance](https://superset-secure-odh-superset.apps.odh-cl2.apps.os-climate.org/))
-- [Trino][7] distributed query engine encapsulating data storage, metadata, and access management
-- [Grafana](https://grafana.com/docs/grafana/latest/introduction/) enables you to query, visualize, alert on, and explore your metrics, logs, and traces wherever they are stored. Grafana OSS provides you with tools to turn your time-series database (TSDB) data into insightful graphs and visualizations. [link to cl2 instance](https://grafana-opf-monitoring.apps.odh-cl2.apps.os-climate.org/login)
-- [INCEpTION](https://inception-project.github.io/releases/25.5/docs/user-guide.html) is a text-annotation environment primarily used by OS-C for machine learning-based data extraction. [Link to cl2 instance](https://inception-inception.apps.odh-cl2.apps.os-climate.org/) :: [link to cl1 instance](https://inception-inception.apps.odh-cl1.apps.os-climate.org/)
+| [Kubeflow Pipelines][5] | MLOps tool to support model development, training, serving and automated machine learning | |
+| [Trino][7] | Distributed SQL Query Engine for big data, used for data ingestion and distributed queries | [Trino Console](https://trino-secure-odh-trino.apps.odh-cl2.apps.os-climate.org/) |
+| [CloudBeaver][8] Web-based database GUI tool which provides rich web interface to Trino | [CloudBeaver Development Instance](https://cloudbeaver-odh-trino.apps.odh-cl2.apps.os-climate.org/) |
+| [Pachyderm][9] | Data-driven pipeline management tool for machine learning, providing version control for data | |
+| [dbt][10] | SQL-based data transformation tool providing git-enabled version control of data transformation pipelines | |
+| [Great Expectations][11] | Data quality tool providing git-enabled data quality pipelines management | |
+| [OpenMetadata][12] | Centralized metadata store providing data discovery, data collaboration, metadata versioning and data lineage | [OpenMetadata Development Instance](https://openmetadata-openmetadata.apps.odh-cl2.apps.os-climate.org) |
+| [Airflow][13] | Workflow management platform for data engineering pipelines | [Airflow Development Instance](https://airflow-openmetadata.apps.odh-cl2.apps.os-climate.org/home) |
+| [Apache Superset][6] | Data exploration and visualization platform | [Superset Development Instance](https://superset-secure-odh-superset.apps.odh-cl2.apps.os-climate.org/) |
+| [Grafana][14] | Analytics and interactive visualization platform | [Grafana Development Instance](https://grafana-opf-monitoring.apps.odh-cl2.apps.os-climate.org/login)
+| [INCEpTION][15] | Text-annotation environment primarily used by OS-C for machine learning-based data extraction | [INCEpTION Development Instance](https://inception-inception.apps.odh-cl2.apps.os-climate.org/) |
 
 ## GitOps for reproducibility, portability, traceability with AI support
 
@@ -35,7 +38,12 @@ One of the most important requirements to ensure data quality through reproducib
 
 ## Project templates
 
-The project template used as a starting point for new repositories can be found here: [project template][1]. It ties together data scientist needs (e.g. data, notebooks, models) and DevOps engineers needs (e.g. manifests). Having structure in a project ensures all the pieces required for the ML and DevOps lifecycles are present and easily discoverable.
+We use two project templates as starting point for new repositories:
+
+- A project template for data pipelines, specific to OS-Climate Data Commons, can be found here: [Data Pipelines Template][16]
+- A project tempalte specifically for AI/ML pipelines can be found here: [Data Science Template][1].
+
+Together the use of these templates ties data scientist needs (e.g. notebooks, models) and data engineers needs (e.g. data and metadata pipelines). Having structure in a project ensures all the pieces required for the Data and MLOps lifecycles are present and easily discoverable.
 
 ## Tutorial Steps
 
@@ -55,9 +63,9 @@ The project template used as a starting point for new repositories can be found 
 
 5. [Create a Data Ingestion Pipeline](./docs/create-ingestion-pipeline.md)
 
-6. [Create a Data Processing Pipeline](./docs/create-processing-pipeline.md)
-   
-7. [Manage Data Security & Compliance](.docs/manage-security-compliance.md)
+6. [Manage Data Extraction](./docs/manage-data-extraction.md)
+
+7. [Perform Data and Metadata Loading](.docs/perform-data-loading.md)
 
 ### ModelOps Lifecycle
 
@@ -65,7 +73,7 @@ The project template used as a starting point for new repositories can be found 
 
 9. [Test Deployed inference application](./docs/test-model.md)
 
-10. [Monitor your inference application deployed](./docs/monitor-model.md)
+10. [Monitor your inference application](./docs/monitor-model.md)
 
 [1]: https://github.com/aicoe-aiops/project-template
 [2]: https://github.com/
@@ -73,4 +81,13 @@ The project template used as a starting point for new repositories can be found 
 [4]: https://jupyter.org/hub
 [5]: https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/
 [6]: https://superset.apache.org/
-[7]: https://trino.io/docs/current/overview/concepts.html
+[7]: https://trino.io/
+[8]: https://dbeaver.com/
+[9]: https://www.pachyderm.com/
+[10]: https://www.getdbt.com/
+[11]: https://greatexpectations.io/
+[12]: https://open-metadata.org/
+[13]: https://airflow.apache.org/
+[14]: https://grafana.com/
+[15]: https://inception-project.github.io/
+[16]: https://github.com/os-climate/data-pipeline-template
