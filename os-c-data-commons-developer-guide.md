@@ -20,7 +20,7 @@ Pipeline development leverages a number of tools provided by Data Commons. The l
 | [JupyterHub][4] | Self-service environment for Jupyter notebooks used to develop pipelines | [JupyterHub Development Instance](https://jupyterhub-odh-jupyterhub.apps.odh-cl2.apps.os-climate.org/) |
 | [Kubeflow Pipelines][5] | MLOps tool to support model development, training, serving and automated machine learning | |
 | [Trino][7] | Distributed SQL Query Engine for big data, used for data ingestion and distributed queries | [Trino Console](https://trino-secure-odh-trino.apps.odh-cl2.apps.os-climate.org/) |
-| [CloudBeaver][8] Web-based database GUI tool which provides rich web interface to Trino | [CloudBeaver Development Instance](https://cloudbeaver-odh-trino.apps.odh-cl2.apps.os-climate.org/) |
+| [CloudBeaver][8] | Web-based database GUI tool which provides rich web interface to Trino | [CloudBeaver Development Instance](https://cloudbeaver-odh-trino.apps.odh-cl2.apps.os-climate.org/) |
 | [Pachyderm][9] | Data-driven pipeline management tool for machine learning, providing version control for data | |
 | [dbt][10] | SQL-based data transformation tool providing git-enabled version control of data transformation pipelines | |
 | [Great Expectations][11] | Data quality tool providing git-enabled data quality pipelines management | |
