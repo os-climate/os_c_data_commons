@@ -1,6 +1,6 @@
 # OS-Climate Data Commons Developer Guide
 
-This developer guide is for data engineers, data scientists and developers of the OS-Climate community who are looking at leveraging the OS-Climate Data Commons to build data ingestion and processing pipelines. It shows step-by-step how to configure your development environment, structure data pipeline projects, and manage data and code in a way that complies with our Architecture Blueprint.
+This developer guide is for data engineers, data scientists and developers of the OS-Climate community who are looking at leveraging the OS-Climate Data Commons to build data ingestion and processing pipelines, as well as AI / ML pipelines. It shows step-by-step how to configure your development environment, structure projects, and manage data and code in a way that complies with our Architecture Blueprint.
 
  - **Need Help?** 
    - Outage/System Failures:  File an Linux Foundation (LF) [outage ticket](https://jira.linuxfoundation.org/plugins/servlet/desk/portal/2/create/30) (note: select OS-Climate from project list)
@@ -10,10 +10,17 @@ This developer guide is for data engineers, data scientists and developers of th
 
 ## Tools
 
-In this guide the following technologies are showcased:
+Pipeline development leverages a number of tools provided by Data Commons. The list below provides an overview of key technologies involved as well as links to development instances:
 
-- [GitHub][2] and [GitHub Projects][3] ([link to Data Commons project board](https://github.com/orgs/os-climate/projects/7))
-- [JupyterHub][4] to launch images with Jupyter tooling ([link to cl1 instance](https://jupyterhub-odh-jupyterhub.apps.odh-cl1.apps.os-climate.org/) :: [link to cl2 instance](https://jupyterhub-odh-jupyterhub.apps.odh-cl2.apps.os-climate.org/))
+| Technology | Description | Link |
+| ---------- | ----------- | ---- |
+| [GitHub][2] | Version control tool used to maintain the pipelines as code | [OS-Climate GitHub](https://github.com/os-climate) |
+| [GitHub Projects][3] | Project tracking tool that integrates issues and pull requests | [Data Commons Project Board](https://github.com/orgs/os-climate/projects/7) |
+| [JupyterHub][4] | Self-service environment for Jupyter notebooks used to develop pipelines | [JupyterHub Development Instance](https://jupyterhub-odh-jupyterhub.apps.odh-cl2.apps.os-climate.org/) |
+
+
+
+
 - [Kubeflow Pipelines][5] for end to end experiments using pipelines
 - [SuperSet][6] data visualation dashboards ([link to superset cl1 instance](https://superset-secure-odh-superset.apps.odh-cl1.apps.os-climate.org/) :: [link to superset cl2 instance](https://superset-secure-odh-superset.apps.odh-cl2.apps.os-climate.org/))
 - [Trino][7] distributed query engine encapsulating data storage, metadata, and access management
