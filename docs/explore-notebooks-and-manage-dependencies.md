@@ -2,3 +2,7 @@
 
 1. Add dependencies to Pipfile in the [packages] section.
 2. Create custom images (is this the same as creating virtual envs?).
+
+## Next Step
+
+[Push changes to GitHub](./push-changes.md)

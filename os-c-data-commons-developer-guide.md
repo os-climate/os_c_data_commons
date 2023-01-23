@@ -61,19 +61,23 @@ Together the use of these templates ties data scientist needs (e.g. notebooks, m
 
 ### DataOps Lifecycle
 
-5. [Create a Data Ingestion Pipeline](./docs/create-ingestion-pipeline.md)
+5. [Data Ingestion Pipeline Overview](./docs/data-ingestion-pipeline.md)
 
-6. [Manage Data Extraction](./docs/manage-data-extraction.md)
+6. [Data Extraction](./docs/data-extraction.md)
 
-7. [Perform Data and Metadata Loading](.docs/perform-data-loading.md)
+7. [Data Loading](./docs/data-loading.md)
+
+8. [Data Transformation](.docs/data-transformation.md)
+
+9. [Metadata Management](.docs/metadata-management.md)
 
 ### ModelOps Lifecycle
 
-8. [Setup and Deploy Inference Application](./docs/deploy-model.md)
+10. [Setup and Deploy Inference Application](./docs/deploy-model.md)
 
-9. [Test Deployed inference application](./docs/test-model.md)
+11. [Test Deployed inference application](./docs/test-model.md)
 
-10. [Monitor your inference application](./docs/monitor-model.md)
+12. [Monitor your inference application](./docs/monitor-model.md)
 
 [1]: https://github.com/aicoe-aiops/project-template
 [2]: https://github.com/

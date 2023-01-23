@@ -1,4 +1,4 @@
-# OS-Climate Data Commons Developer Guide: Create ingestion pipeline
+# OS-Climate Data Commons Developer Guide: Data Extraction
 
 To go through a typical ingestion pipeline, we will use an ingestion example from our [data-platform-demo repository](https://github.com/os-climate/data-platform-demo), which is a demo notebook showing how the ingestion process from source data buckets to a Trino schema in our Development or Production Data Buckets. The sample we will use is [PUDL Data Ingestion Sample](https://github.com/os-climate/data-platform-demo/blob/master/notebooks/pudl_ingestion_sample.ipynb) which shows the following steps required in ingesting data:
 
