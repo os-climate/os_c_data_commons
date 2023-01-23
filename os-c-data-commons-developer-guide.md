@@ -67,9 +67,9 @@ Together the use of these templates ties data scientist needs (e.g. notebooks, m
 
 7. [Data Loading](./docs/data-loading.md)
 
-8. [Data Transformation](.docs/data-transformation.md)
+8. [Data Transformation](./docs/data-transformation.md)
 
-9. [Metadata Management](.docs/metadata-management.md)
+9. [Metadata Management](./docs/metadata-management.md)
 
 ### ModelOps Lifecycle
 
