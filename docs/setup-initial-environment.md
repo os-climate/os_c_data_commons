@@ -4,7 +4,12 @@ This section covers how to  setup your development environment as a contributor 
 
 ## 1. Create new GitHub repository for pipeline development
 
-In order to have a standardized structure that can be easily understood by data scientists, devops engineers and developers, repositories should be created by the on the project template [here][1]. You can click the `Use the template` button provided in the repository and create the structure for your repo this way.   *Take care to select **OS-Climate** as the owner; the default is to create under your own GitHub ID, which may not be your intention if you are contributing to OS-Climate.*
+In order to have a standardized structure that can be easily understood by data scientists, devops engineers and developers, repositories should be created by using one of the project templates:
+
+- [Template for Data Science projects][1]
+- [Template for Data Pipeline projects][4]
+
+You can click the `Use the template` button provided in the repository and create the structure for your repo this way.   *Take care to select **OS-Climate** as the owner; the default is to create under your own GitHub ID, which may not be your intention if you are contributing to OS-Climate.*
 
 ![Repository Template](../images/developer_guide/aicoe-project-template.png)
 
@@ -40,10 +45,7 @@ With your GitHub credentials and once you are part of the team odh-env-users, yo
 
 ## 4. Set your credentials environment variables
 
-From the File menu, create a new text file called `credentials.env`.
-You can copy this file from [this link](https://github.com/os-climate/os_c_data_commons/blob/main/docs/credentials.env)
-This example file includes links the JWT token retrieval client for Trino access.
-Access credentials for the OSC physical landing S3 bucket are provided on request.
+From the File menu, create a new text file called `credentials.env`. You can copy this file from [this link](https://github.com/os-climate/os_c_data_commons/blob/main/docs/credentials.env). This example file includes links the JWT token retrieval client for Trino access.
 
 To secure and restrict the access to data based on user profiles, we have defined role-based accessc controls to specific schemas in Trino based on your team assignments. Therefore, authentication with the Trino service has been federated with GitHub SSO and on a weekly basis you will need to retrieve a JWT token from this [Token Retrieval Client][3]. Get the token and cut / paste the token string as your TRINO_PASSWD in the credentials file.
 
@@ -52,11 +54,11 @@ To secure and restrict the access to data based on user profiles, we have define
 Once you are in the Jupyterlab UI, you can use the Git extension provided to clone this repo.
 
 1. Click the Git extension button from Jupyterlab UI and select `Clone a repository`:
-   
+
 ![Cloning a Git repository](../images/developer_guide/jupyterhub-gitclone.png)
 
 2. Enter the HTTPS address of the repository you want to clone. If it is private and you have access, enter your credentials when requested.
-   
+
 3. You are ready to go!
 
 ## Next Step
@@ -66,3 +68,4 @@ Once you are in the Jupyterlab UI, you can use the Git extension provided to clo
 [1]: https://github.com/aicoe-aiops/project-template
 [2]: https://jupyterhub-odh-jupyterhub.apps.odh-cl2.apps.os-climate.org/
 [3]: https://das-odh-trino.apps.odh-cl2.apps.os-climate.org/
+[4]: https://github.com/os-climate/data-pipeline-template
