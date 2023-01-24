@@ -2,7 +2,7 @@
 
 OS-Climate Data Commons provides a backbone for building, maintaining and operating data pipelines at scale. Our data ingestion pipelines are structured following an Extraction Loading Transformation (ELT) patterns with key steps represented in the diagram below.
 
-![Data Ingestion Pipeline Process Overview](https://github.com/os-climate/os_c_data_commons/blob/main/images/developer_guide/images/Data-Ingestion-Process.png)
+![Data Ingestion Pipeline Process Overview](../images/developer_guide/Data-Ingestion-Process.png)
 
 The key steps are as follows:
 
