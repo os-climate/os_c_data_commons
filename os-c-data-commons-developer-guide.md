@@ -73,11 +73,13 @@ Together the use of these templates ties data scientist needs (e.g. notebooks, m
 
 ### ModelOps Lifecycle
 
-10. [Setup and Deploy Inference Application](./docs/deploy-model.md)
+10. [ModelOps Lifecycle Overview](./docs/model-ops-lifecycle.md)
 
-11. [Test Deployed inference application](./docs/test-model.md)
+11. [Setup and Deploy Inference Application](./docs/deploy-model.md)
 
-12. [Monitor your inference application](./docs/monitor-model.md)
+12. [Test Deployed inference application](./docs/test-model.md)
+
+13. [Monitor your inference application](./docs/monitor-model.md)
 
 [1]: https://github.com/aicoe-aiops/project-template
 [2]: https://github.com/
