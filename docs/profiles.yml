@@ -1,0 +1,13 @@
+dbt_project_name:
+  target: dev
+  outputs:
+    dev:
+      type: trino
+      method: jwt
+      user: user_name
+      jwt_token: jwt_token
+      database: osc_datacommons_dev
+      host: trino-secure-odh-trino.apps.odh-cl2.apps.os-climate.org
+      port: 443
+      schema: dbt_project_name
+      threads: 1
