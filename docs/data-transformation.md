@@ -35,10 +35,12 @@ We leverage baseline DBT capabilities here with a few key aspects to note:
 
 Finally the execution of the DBT pipeline can be run from the command line in 4 steps:
 
+```
 dbt debug --profiles-dir /opt/app-root/src/
 dbt run --profiles-dir /opt/app-root/src/
 dbt test --profiles-dir /opt/app-root/src/
 dbt docs generate --profiles-dir /opt/app-root/src/
+```
 
 ## Next Step
 
