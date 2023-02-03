@@ -68,6 +68,8 @@ with client.commit("wri-gppd", "master") as commit:
 ```
 Note that we do not condition the type of file format to be used for versioning purpose. A recommendation is to use column-oriented data file format (such as Parquet, ORC) while bearing in mind that the data loading step will require reading the data into a Pandas dataframe for subsequent loading into Trino.
 
+It should also be noted that for data that should carry units (i.e., metric tons of CO2e, petajoules, Euros, etc.), Pint-Pandas works best with column data all of the same type.  Thus a timeseries of companies in rows and years in columns is an anti-pattern (because different companies have units particular to their sectors) while companies in columns and years in rows typically leads to homogeneous (and thus PintArray-friendly) data columns.
+
 ## Next Step
 
 [Data Loading](./data-loading.md)
