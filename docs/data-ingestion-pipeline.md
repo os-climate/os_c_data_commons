@@ -14,7 +14,7 @@ The key steps are as follows:
 
 In the above process, all data, metadata, and data quality checks are automatically documented and made available in the Data Commons layer as a new version-controlled data set. Any exception in the data ingestion pipeline or, if the ingestion is successful, a report on the data ingestion and processing including results of quality tests are generated and sent to the data owner. This approach allows to easily and transparently correct erroneous data inputs and trigger re-processing as required, since the resulting data load is provided and made accessible to the data owner even in case the data quality level is not good enough for distribution.
 
-Next, we will go through the various steps of a data pipeline with code examples. For this, we will use an ingestion example from our [WRI Global Power Plant Database ingestion pipeline repository](https://github.com/os-climate/wri-gppd-ingestion-pipeline), which showw the ingestion process from file-based source data into a dedicated Trino schema as well as all the steps required for data quality and metadata management.
+Next, we will go through the various steps of a data pipeline with code examples. For this, we will use an ingestion example from our [WRI Global Power Plant Database ingestion pipeline repository](https://github.com/os-climate/wri-gppd-ingestion-pipeline), which show the ingestion process from file-based source data into a dedicated Trino schema as well as all the steps required for data quality and metadata management.
 
 ## Next Step
 
