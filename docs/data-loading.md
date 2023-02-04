@@ -24,7 +24,7 @@ engine = osc.attach_trino_engine(verbose=True, catalog=ingest_catalog)
 
 ## 3. Ingest the data via Trino
 
-In this case we use Trino as an ingestion engine, which allows creating a new table schema with a SQL statement and directly loading the data from a partitioned set of parquet files writtten in our Hive storage bucket. We may first need to create a new schema if it does not exist:
+In this case we use Trino as an ingestion engine, which allows creating a new table schema with a SQL statement and directly loading the data from a partitioned set of parquet files writtten in our Hive storage bucket. We may first need to create a new schema if it does not exist. Note that we use `osc._do_sql` instead of calling `engine.execute` directly, because since Trino version 395 and the trino python client version 0.317.0, some calls are complete without returning rows, and others won't complete unless rows are fetched via fetchall.  The `osc._do_sql` command abstracts that away.
 
 ```
 ingest_schema = 'schema_name'
@@ -35,9 +35,7 @@ create schema if not exists {ingest_catalog}.{ingest_schema} with (
     location ='s3a://{ingest_bucket}/data/{ingest_schema}.db/'
 )
 """
-print (schema_create_sql)
-schema_create = engine.execute(schema_create_sql)
-print(schema_create.fetchall())
+osc._do_sql(schema_create_sql, engine, verbose=True)
 ```
 
 Once done, osc-ingest-tools provide a fast loading method via Hive:
