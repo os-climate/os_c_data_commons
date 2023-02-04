@@ -55,6 +55,11 @@ osc.fast_pandas_ingest_via_hive(
 ```
 From there the data should be available in Trino and can further data processing can be done from there, in particular data transformation if required. Note that the data transformation setup need to be executed regardless in order to have the data set metadata ingested, as we leverage the data transformation part of the pipeline with dbt to push the data set metadata into our metadata catalogue based on OpenMetadata.
 
+## 4. Using Seed Data
+
+[As pointed out in previously mentioned dbt training modules](https://timeflow.academy/dbt/labs/dbt-seed-data-lab), having access to some small data tables (such as country codes) can greatly simplify the ingestion of principal data tables.  The `dbt seed` command allows the loading of small CSV files that can be stored in the dbt project repository.  Of course it is also possible to reference, load, and use such data within the ingention notebooks themselves, but if you think it makes more sense to use the data only within the context of dbt, the `dbt seed` command makes that possible.
+
+
 ## Next Step
 
 [Data Transformation](./data-transformation.md)
