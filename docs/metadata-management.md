@@ -2,6 +2,10 @@
 
 ## 1. Data Quality Validation
 
+From the previous page you have already run `dbt test --profiles-dir /opt/app-root/src/` which provides a preliminary data quality check.
+
+What more needs to be said?
+
 ## 2. Metadata Management
 
 ## 3. Data Profiling and Sample Data
