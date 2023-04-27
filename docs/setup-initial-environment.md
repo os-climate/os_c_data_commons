@@ -45,9 +45,11 @@ With your GitHub credentials and once you are part of the team odh-env-users, yo
 
 ## 4. Set your credentials environment variables
 
-From the File menu, create a new text file called `credentials.env`. You can copy this file from [this link](https://github.com/os-climate/os_c_data_commons/blob/main/docs/credentials.env). This example file includes links the JWT token retrieval client for Trino access.
+From the File menu, create a new text file called `credentials.env`. You can copy this file from [this link](https://github.com/os-climate/os_c_data_commons/blob/main/docs/credentials.env). This example file includes a link to the JWT token retrieval client for Trino access.
 
-To secure and restrict the access to data based on user profiles, we have defined role-based accessc controls to specific schemas in Trino based on your team assignments. Therefore, authentication with the Trino service has been federated with GitHub SSO and on a weekly basis you will need to retrieve a JWT token from this [Token Retrieval Client][3]. Get the token and cut / paste the token string as your TRINO_PASSWD in the credentials file.
+To secure and restrict the access to data based on user profiles, we have defined role-based access controls to specific schemas in Trino based on your team assignments. Therefore, authentication with the Trino service has been federated with GitHub SSO and on a weekly basis you will need to retrieve a JWT token from this [Token Retrieval Client][3]. Get the token and cut / paste the token string as your TRINO_PASSWD in the credentials file.
+
+Care should be taken to never commit the credentials.env file to your repository. Our template repos have this file listed in the .gitignore, so that it cannot be committed. If any changes are made to the repository structure or .gitignore file, it is important to make sure that this exclusion is still in place. If credentials are ever exposed publicly, please contact security@lists.os-climate.org immediately.
 
 ## 5. Access your repo using Jupyterlab Git Extension
 
@@ -65,7 +67,7 @@ Once you are in the Jupyterlab UI, you can use the Git extension provided to clo
 
 [Explore notebooks and manage dependencies](./explore-notebooks-and-manage-dependencies.md)
 
-[1]: https://github.com/aicoe-aiops/project-template
+[1]: https://github.com/os-climate/data-science-template
 [2]: https://jupyterhub-odh-jupyterhub.apps.odh-cl2.apps.os-climate.org/
 [3]: https://das-odh-trino.apps.odh-cl2.apps.os-climate.org/
 [4]: https://github.com/os-climate/data-pipeline-template
