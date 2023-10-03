@@ -9,6 +9,12 @@ This developer guide is for data engineers, data scientists and developers of th
 - General infrastructure support:  Get help on OS-Climate Slack [Data Commons channel](https://os-climate.slack.com/archives/C034SCF92BU)
 - Data Commons developer support: Get help on OS-Climate Slack [Developers channel](https://os-climate.slack.com/archives/C034SCQU919)
 
+**OS-Climate's Cluster Information**
+ - Cluster 1 [CL1](https://console-openshift-console.apps.odh-cl1.apps.os-climate.org/):  used for development and initial upgrades of applications
+ - Cluster 2 [CL2](https://console-openshift-console.apps.odh-cl2.apps.os-climate.org/):  stable cluster, sandbox UI and released versions of tools are available from cluster 2
+ - Cluster 3 [CL3](https://console-openshift-console.apps.odh-cl3.apps.os-climate.org/):  administrative cluster, managed by Red Hat and Linux Foundation IT org
+ - Cluster 4 [CL4](https://console-openshift-console.apps.odh-cl4.apps.os-climate.org/):  latest implementation of Red Hat's Data Mesh pattern - under construction.  Follows Open Data Hub[Data Mesh Pattern](https://github.com/opendatahub-io-contrib/data-mesh-pattern).  
+
 ## Tools
 
 Pipeline development leverages a number of tools provided by Data Commons. The list below provides an overview of key technologies involved as well as links to development instances:
