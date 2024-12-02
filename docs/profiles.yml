@@ -4,10 +4,10 @@ dbt_project_name:
     dev:
       type: trino
       method: jwt
-      user: user_name
-      jwt_token: jwt_token
+      user: "{{ env_var('TRINO_USER') }}"
+      jwt_token: "{{ env_var('TRINO_PASSWD') }}"
       database: osc_datacommons_dev
-      host: trino-secure-odh-trino.apps.odh-cl2.apps.os-climate.org
-      port: 443
+      host: "{{ env_var('TRINO_HOST') }}"
+      port: "{{ env_var('TRINO_PORT') }}"
       schema: dbt_project_name
       threads: 1
